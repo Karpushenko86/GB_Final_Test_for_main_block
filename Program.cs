@@ -49,3 +49,44 @@ void PrintArray(string[] array)
     }
     else {Console.Write("]");}
 }
+
+Console.Write("Введите размер массива: ");
+int sizeArray = Convert.ToInt32(Console.ReadLine());
+
+string[] array = new string[sizeArray];
+for (int i = 0; i < sizeArray; i++)
+{
+    Console.Write($"Введите {i}-й элемент массива: ");
+
+    array[i] = Console.ReadLine();
+}
+
+// string[] array1 = {"Hello", "2", "world", ":-)"};
+// string[] array2 = {"1234", "1567", "-2", "computer science"};
+// string[] array3 = {"Russia", "Denamrk", "Kazan"};
+// string[] array4 = {"", "", ""};
+
+PrintArray(array);
+Console.Write(" => ");
+PrintArray(LessThreeArray(array));
+Console.WriteLine();
+
+// PrintArray(array1);
+// Console.Write(" => ");
+// PrintArray(LessThreeArray(array1));
+// Console.WriteLine();
+
+// PrintArray(array2);
+// Console.Write(" => ");
+// PrintArray(LessThreeArray(array2));
+// Console.WriteLine(); 
+
+// PrintArray(array3);
+// Console.Write(" => ");
+// PrintArray(LessThreeArray(array3));
+// Console.WriteLine();
+
+// PrintArray(array4);
+// Console.Write(" => ");
+// PrintArray(LessThreeArray(array4));
+// Console.WriteLine();
