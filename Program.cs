@@ -11,3 +11,41 @@
 // 
 // Пример от себя:
 // [“”, “”, “”] → [ , , ]
+
+string[] LessThreeArray(string[] array)
+{
+    int count = 0;
+    string[] tempArray = new string[array.Length];
+    for (int i = 0; i < array.Length; i++)
+    {
+        if(array[i].Length <= 3)
+        {
+            tempArray[count] = array[i];
+            count++;
+        }
+    }
+
+    string[] newArray = new string[count];
+
+    for (int i = 0; i < count; i++)
+    {
+        newArray[i] = tempArray[i];
+    }
+
+    return newArray;
+}
+
+void PrintArray(string[] array)
+{
+    Console.Write("[");
+
+    if(array.Length > 0)
+    {
+        for (int i = 0; i < array.Length - 1; i++)
+        {
+            Console.Write($"\"{array[i]}\",");
+        }
+        Console.Write($"\"{array[array.Length - 1]}\"]");
+    }
+    else {Console.Write("]");}
+}
